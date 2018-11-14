@@ -1,0 +1,26 @@
+#include<iostream>
+#include<queue>
+using namespace std;
+
+class meracomparator{
+public:
+    bool operator()(int a,int b){
+        return a>b;
+    }
+};
+
+int main(){
+    priority_queue<int,vector<int>,meracomparator> h;
+    h.push(5);
+    h.push(0);
+    h.push(1);
+    h.push(10);
+    h.push(8);
+    h.push(9);
+
+    while(!h.empty()){
+        cout<<h.top()<<endl;
+        h.pop();
+    }
+    return 0;
+}
